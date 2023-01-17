@@ -1,0 +1,1 @@
+javac -d "C:\Program Files\apache-tomcat-10\webapps\garage\WEB-INF\classes" --release 8 *.java

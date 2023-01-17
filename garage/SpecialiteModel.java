@@ -4,8 +4,6 @@ import dao.*;
 import service.*;
 
 
-
-
 public class SpecialiteModel extends BaseModel{
     String nom;
 

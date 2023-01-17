@@ -9,7 +9,7 @@ import service.GenreService;
 import service.NiveauService;
 import service.SpecialiteService;
 
-public class InscriptionEmployerController {
+public class InscriptionEmployerController extends HttpServlet{
     public void doPost (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
 
     }
@@ -23,7 +23,7 @@ public class InscriptionEmployerController {
         req.setAttribute("listeNiveau",ns.getAll());
         req.setAttribute("listeSpecialite",ss.getAll());
         try {
-            RequestDispatcher dispat = req.getRequestDispatcher("InsertEmployer.jsp");
+            RequestDispatcher dispat = req.getRequestDispatcher("inscriptionEmploye.jsp");
             dispat.forward(req,res);
         } catch (Exception e) {
             // TODO: handle exception

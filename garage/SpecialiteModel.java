@@ -1,12 +1,18 @@
 package model;
 
+import dao.*;
+import service.*;
+
+
+
+
 public class SpecialiteModel extends BaseModel{
     String nom;
 
     public SpecialiteModel(){}
     
-    public SpecialiteModel(String nom){
-        this.nom = nom;
+    public SpecialiteModel(String n){
+        this.nom = n;
     }
 
     public String getNom() {

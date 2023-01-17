@@ -1,5 +1,8 @@
 package model;
 
+import dao.*;
+import service.*;
+
 import java.sql.Date;
 
 public class EmployerModel extends BaseModel {
@@ -8,7 +11,6 @@ public class EmployerModel extends BaseModel {
     int idGenre;
     Date ddn;
     int idNiveau;
-    int idSpeciaite;
     
     public String getNom() {
         return nom;
@@ -40,13 +42,6 @@ public class EmployerModel extends BaseModel {
     public void setIdNiveau(int idNiveau) {
         this.idNiveau = idNiveau;
     }
-    public int getIdSpeciaite() {
-        return idSpeciaite;
-    }
-    public void setIdSpeciaite(int idSpeciaite) {
-        this.idSpeciaite = idSpeciaite;
-    }
-
     
 
 }

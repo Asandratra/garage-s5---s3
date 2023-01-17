@@ -1,5 +1,8 @@
 package dao;
 
+import model.*;
+import service.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +15,7 @@ public class GenreDAO {
         PreparedStatement stat=null;
         ResultSet rs = null;
         String sql = "SELECT * FROM genre";
-        ArrayList rep = null;
+        ArrayList rep = new ArrayList<>();
         try {
             stat = co.prepareStatement(sql);
             rs = stat.executeQuery();

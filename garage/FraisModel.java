@@ -1,14 +1,14 @@
 package model;
 
-import dao.*;
-import service.*;
 
-public class GenreModel extends BaseModel{
+public class FraisModel {
     String nom;
 
-    public GenreModel(){}
     
-    public GenreModel(String nom){
+    public FraisModel(){
+
+    }
+    public FraisModel(String nom) {
         this.nom = nom;
     }
 
@@ -19,5 +19,6 @@ public class GenreModel extends BaseModel{
     public void setNom(String nom) {
         this.nom = nom;
     }
+
     
 }

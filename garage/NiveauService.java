@@ -1,5 +1,8 @@
 package service;
 
+import dao.*;
+import model.*;
+
 import java.util.ArrayList;
 import java.sql.*;
 
@@ -18,6 +21,7 @@ public class NiveauService {
         } catch (Exception e) {
             // TODO: handle exception
         }
+        return rep;
     }
 
 }

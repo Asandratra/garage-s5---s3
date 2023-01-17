@@ -1,5 +1,9 @@
 package dao;
 
+import service.*;
+import model.*;
+
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,9 +14,10 @@ public class SpecialiteDAO {
     public ArrayList getAll(Connection co){
         PreparedStatement stat=null;
         ResultSet rs = null;
-        String sql = "SELECT * FROM specialite";
-        ArrayList rep = null;
+        String sql = "SELECT * FROM specialites";
+        ArrayList rep = new ArrayList<>();
         try {
+            System.out.println(sql);
             stat = co.prepareStatement(sql);
             rs = stat.executeQuery();
             rep = new ArrayList<>();
@@ -20,7 +25,7 @@ public class SpecialiteDAO {
                 rep.add(new SpecialiteModel(rs.getString("nom")));
             }
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e);
         } 
         return rep;
     }      

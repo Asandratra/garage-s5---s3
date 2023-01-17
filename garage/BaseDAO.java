@@ -4,20 +4,22 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class BaseDAO {
-   private String driver = "org.postgresal.Driver";
+   private String driver = "org.postgresql.Driver";
    private Connection co;
-   private String connect = "jdbc:postgresal://localhost:5432/garages";
-   private String user = "garages";
-   private String password = "garages";
+   private String connect = "jdbc:postgresql://localhost:5432/garages";
+   private String user = "postgres";
+   private String password = "root";
 
-   public Connection getCon() throws Exception{
+   public Connection getCon(){
     try {
+        System.out.println("e");
         Class.forName(this.getDriver());
         co = DriverManager.getConnection(connect,user,password);
     } catch (Exception e) {
-        throw e;
+        System.out.println(e);
         // TODO: handle exception
     }
+    return co;
    }
 
 public String getDriver() {
@@ -51,7 +53,5 @@ public void setPassword(String password) {
     this.password = password;
 }
    
-   
-
 
 }

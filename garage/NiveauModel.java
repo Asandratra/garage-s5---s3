@@ -1,5 +1,8 @@
 package model;
 
+import dao.*;
+import service.*;
+
 public class NiveauModel extends BaseModel{
     String nom;
 
